@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap')
+;
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  font-family: "Poppins", sans-serif;
+
+}
+body{
+  background-color: black;
+}
+@keyframes blink-text {
+  0%, 50%, 100% {
+    opacity: 1;
+  }
+  25%, 75% {
+    opacity: 0;
+  }
+}
+
+@keyframes blink-button {
+  0%, 50%, 100% {
+    opacity: 1;
+  }
+  25%, 75% {
+    opacity: 0;
+  }
+}
+
+@keyframes slidein-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes menu-transition {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-blink-text {
+  animation: blink-text 1s infinite alternate;
+}
+
+.animate-blink-button {
+  animation: blink-button 1s 2s infinite alternate;
+}
+
+.animate-slidein-left {
+  animation: slidein-left 1s ease-in-out forwards;
+}
+
+.animate-menu-transition {
+  animation: menu-transition 1s ease-in-out forwards;
+}
+/* index.css */
+
+/* Apply background image to the header */
+.header {
+  background-image: url('C:\\Users\\Allied\\Desktop\\Project\\client\\src\\components\\back.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.zoom-in {
+  transform: scale(1.1); /* Adjust scale value as needed for zoom effect */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for zoom effect */
+}
+.image-container {
+  overflow-x: auto; /* Enable horizontal scrolling */
+  white-space: nowrap; /* Prevent images from wrapping */
+}
+
+.image-scroll {
+  display: inline-flex; /* Make images display in a row */
+  gap: 10px; /* Adjust the gap between images */
+}
+
+.card-image {
+  width: 400px; /* Set the width of each image */
+  height: 300px; /* Set the height of each image */
+}
+.animate-image {
+  animation: image-animation 0.5s ease-in-out forwards;
+}
+
+@keyframes image-animation {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+
+.bg-black {
+  cursor: pointer;
+}
+
+.bg-black:hover {
+  filter: brightness(90%);
+}
+
+/* Achievements.css */
+
+.transition-opacity {
+  transition: opacity 0.5s ease-in-out; /* Adjust duration and timing function as needed */
+}
+
+.transition-opacity:hover {
+  opacity: 0.5; /* Adjust the opacity value when hovering */
+}
+/* Achievements.css */
+
+.cursive-font {
+  font-family: cursive;
+}
+.room-details-container {
+  text-align: center;
+}
+
+.title {
+  color: white;
+}
+
+.room-details-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.room-image-container {
+  flex: 1;
+}
+
+.room-image {
+  width: 100%;
+  max-width: 300px; /* Adjust the maximum width as needed */
+}
+
+.room-info {
+  flex: 1;
+  padding: 0 20px; /* Adjust the padding as needed */
+  color: white;
+}
+
+.room-name {
+  font-size: 24px; /* Adjust the font size as needed */
+}
+
+.room-card {
+  max-width: 500px; /* Adjust as needed */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 10px;
+}
+
+.room-content {
+  display: flex;
+  align-items: center;
+}
+
+.room-image {
+  width: 200px; /* Adjust image width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 20px; /* Spacing between image and text */
+}
+
+.room-details {
+  flex: 1;
+}
+
+.room-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.room-info {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.btn {
+  margin-top: 10px;
+}
+
+/* Add more custom styles as needed */
+.room-card {
+
+    display: flex; /* Use flexbox to arrange items horizontally */
+    width: 100%; /* Make the card take full width of its container */
+    height: 100%; /* Make the card take full height of its container */
+    margin-bottom: 20px; /* Add some spacing between cards */
+
+
+  background-color: #f8f9fa; /* Set background color for the room card */
+  padding: 20px; /* Add padding for spacing */
+  border-radius: 10px; /* Add border radius for rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+.room-content {
+  display: flex;
+  align-items: center;
+  width:100%; /* Align items vertically */
+}
+
+.image-container {
+  flex: 0 0 50%; /* Set width for the image container */
+  margin-right: 20px; /* Adjust spacing between image and text */
+}
+
+.room-image {
+  width: 100%;
+}
+
+.text-container {
+  flex: 1; /* Take remaining space */
+  width:100%
+}
+
+.highlight-text {
+  color: #007bff; /* Set different color for highlighted text */
+  font-size: 18px; /* Increase font size */
+}
+
+.view-details-btn {
+  background-color: #007bff; /* Set background color for the button */
+  color: white; /* Set text color */
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.view-details-btn:hover {
+  background-color: #0056b3; /* Darker background color on hover */
+}
+.room-card {
+  display: flex; /* Use flexbox to arrange items horizontally */
+  margin-bottom: 20px;
+  width:100%; /* Add some spacing between cards */
+}
+
+.room-content {
+  display: flex; /* Use flexbox to arrange image and text containers horizontally */
+  width: 100%; /* Ensure content takes full width */
+}
+
+.image-container {
+  flex: 0 0 30%; /* Set width for image container */
+  margin-right: 20px; /* Add some spacing between image and text */
+}
+
+.room-image {
+  width: 100%; /* Ensure image fills its container */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.text-container {
+  flex: 1; /* Allow text container to expand */
+}
+
+.room-info {
+  margin-top: 0; /* Remove default margin */
+  margin-bottom: 0; /* Remove default margin */
+}
+
+.highlight-text {
+  font-weight: bold; /* Make highlighted text bold */
+}
+
+.btn {
+  margin-right: 10px; /* Add some spacing between buttons */
+}
+.container-fluid.vh-100 {
+  height: 100vh; /* Set container's height to 100% of viewport height */
+}
+
+.background-image {
+  width: 100%;
+  height: 100%;
+  background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20220311/pngtree-five-star-hotel-with-side-door-and-wooden-door-image_990211.jpg');
+background-size: contain;
+}
+
+.room-list-container {
+  position: relative;
+  
+}
+
+
+.content-container {
+  z-index: 1;
+  padding: 20px;
+}
+
+.col-md-6 {
+  width: 50%;
+}
+
+@media (max-width: 768px) {
+  .col-md-6 {
+    width: 100%;
+  }
+}
